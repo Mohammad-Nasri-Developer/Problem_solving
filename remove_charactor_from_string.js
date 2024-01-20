@@ -18,8 +18,14 @@
 ///------- Solution 2
 
 function removeCharacterFromString(word, characterToRemove) {
-  return word.split("").filter((x) => x !== characterToRemove.toLowerCase() && x !== characterToRemove.toUpperCase() )
-      .join('');
+  return word
+    .split("")
+    .filter(
+      (x) =>
+        x !== characterToRemove.toLowerCase() &&
+        x !== characterToRemove.toUpperCase()
+    )
+    .join("");
 }
 
 console.log(removeCharacterFromString("ElddzeroD WebDD ddSchool", "d"));

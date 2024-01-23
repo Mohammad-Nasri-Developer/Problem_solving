@@ -1,4 +1,14 @@
 {
   "workbench.colorTheme": "Copilot Theme",
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "javascript.suggest.completeJSDocs": false,
+  "editor.parameterHints.enabled": false,
+  "editor.codeActionWidget.includeNearbyQuickFixes": false,
+  "github.copilot.editor.enableAutoCompletions": false,
+  "css.format.enable": false,
+  "css.format.newlineBetweenRules": false,
+  "css.format.newlineBetweenSelectors": false,
+  "eslint.codeAction.showDocumentation": {
+    "enable": false
+  }
 }

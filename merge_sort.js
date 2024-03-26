@@ -1,49 +1,53 @@
 function mergeSort(arr) {
+
+    // check if already sorted or has no elements
     if (arr.length <= 1) {
-        return arr; // Base case: array with 0 or 1 element is already sorted
+        return arr;
     }
 
-    const mid = Math.floor(arr.length / 2); // Find the middle index
-    const leftHalf = arr.slice(0, mid); // Split the array into two halves
+    const mid =  Math.floor(arr.length / 2);
+    const leftHalf = arr.slice(0, mid);
     const rightHalf = arr.slice(mid);
 
     // Recursively sort the left and right halves
     const sortedLeft = mergeSort(leftHalf);
     const sortedRight = mergeSort(rightHalf);
 
-    // Merge the sorted halves
+    // merge the sorted values
+    // This is Helper Function to merge sorted arrays
     return merge(sortedLeft, sortedRight);
 }
 
-function merge(left, right) {
+function merge(rightArr, leftArr) {
     let result = [];
     let leftIndex = 0;
     let rightIndex = 0;
 
     // Compare elements from left and right arrays and push the smaller one into the result
-    while (leftIndex < left.length && rightIndex < right.length) {
-        if (left[leftIndex] < right[rightIndex]) {
-            result.push(left[leftIndex]);
+    while (leftIndex < leftArr.length && rightIndex < rightArr.length) {
+        if (leftArr[leftIndex] < rightArr[rightIndex]) {
+            result.push(leftArr[leftIndex]);
             leftIndex++;
         } else {
-            result.push(right[rightIndex]);
+            result.push(rightArr[rightIndex]);
             rightIndex++;
         }
     }
 
     // Push remaining elements from left and right arrays (if any)
-    while (leftIndex < left.length) {
-        result.push(left[leftIndex]);
+    while (leftIndex < leftArr.length) {
+        result.push(leftArr[leftIndex]);
         leftIndex++;
     }
 
-    while (rightIndex < right.length) {
-        result.push(right[rightIndex]);
+    while (rightIndex < rightArr.length) {
+        result.push(rightArr[rightIndex]);
         rightIndex++;
     }
 
     return result;
 }
+
 
 // Example usage:
 const arr = [12, 11, 13, 5, 6, 7];

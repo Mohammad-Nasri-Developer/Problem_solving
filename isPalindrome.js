@@ -20,6 +20,7 @@
 var isPalindrome_ApproachTwo = function (x) {
 
     if (x < 0 || (x % 10 === 0 && x !== 0)) {
+        // if negative, or last digit is 0 and not 0 itself so false
         return false;
     }
     let reversed = 0;

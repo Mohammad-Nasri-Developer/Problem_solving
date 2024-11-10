@@ -8,7 +8,7 @@ var removeElement = function (nums, val) {
 
     for (let i = 0; i < nums.length; i++) {
         if (nums[i] !== val) {
-            nums[k] = nums[i]; // Move the non-val element to the front
+            nums[k] = nums[i]; // Move the non-val element` to the front
             k++; // Increment the count of non-val elements
         }
         // else{

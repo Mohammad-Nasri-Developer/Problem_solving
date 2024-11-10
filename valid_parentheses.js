@@ -1,3 +1,6 @@
+
+
+
 /**
  * @param {string} s
  * @return {boolean}
@@ -18,7 +21,7 @@ var isValid = function (s) {
 
 
     for (const c of s) {
-        if (c in map) {   // closing
+        if (c in map) {   // closing (check if there is such key in the map)
             if (stack.length !== 0 && stack[stack.length - 1] === map[c]) {
                 stack.pop(); // correct, so delete it
             } else {
